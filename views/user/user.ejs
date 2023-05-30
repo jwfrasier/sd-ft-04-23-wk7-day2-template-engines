@@ -3,13 +3,16 @@
 
 <head>
     <title>EJS Template</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <h1>Welcome to my EJS template!</h1>
-    <p>
-        <%= user.name %>
-    </p>
+    <%- include ("../partials/nav.ejs") %>
+        <h1>home</h1>
+        <p>
+            <%= user.name %>
+        </p>
 </body>
 
-</html>a
+</html>

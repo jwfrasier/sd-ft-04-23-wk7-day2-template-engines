@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EJS Template</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <% userData.forEach(user=> { %> <div class="card">
+                <div class="banner">
+                    <svg></svg>
+                </div>
+                <div class="menu">
+                </div>
+                <h2 class="name">
+                    <%= user.name %>
+                </h2>
+                <h4 class="name">
+                    <%= user.company.name %>
+                </h4>
+                <div class="bottom">
+                    <div class="title">
+                        <a href="">
+                            <%= user.email %>
+                        </a>
+                    </div>
+                    <div class="actions">
+                        <div class="follow-info">
+                            <% user.projects.forEach((project)=> { %> <h2><a href="">
+                                        <%= project.name %>
+                                    </a></h2>
+                                <% }) %>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <% user.skills.forEach((project)=> { %> <p>
+                                <%= project %>
+                            </p>
+                            <% }) %>
+                    </div>
+                    <div class="follow-btn">
+                        <button>Follow</button>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+    </div>
+</body>
+
+</html>
